@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <mat-toolbar>
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon class="text-yellow-500">menu</mat-icon>
+        </button>
+      </div>
+      <div class="logo-container" fxShow [fxShow.xs]="false">
+        <a mat-button class="companyName logo-link" routerLink="/">
+          <img src="../../../../assets/logo/logo.png" alt="logo movieApp" class="logo">
+        </a>
+      </div>
+      <span class="spacer-nav"></span>
+      <div fxShow="true" fxHide.lt-md="true" class="text-yellow-500">
+        <a mat-button routerLink="/">home</a>
+        <a mat-button routerLink="/movies">movies</a>
+        <a mat-button routerLink="/series">series</a>
+        <a mat-button routerLink="/genres">genres</a>
+      </div>
+
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill>
+
+      <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true"
+                   class="responsive-container">
+        <div fxLayout="column">
+          <a mat-button routerLink="/">home</a> <!--routerLink is equivalent to href in html -->
+          <a mat-button routerLink="/movies">movies</a>
+          <a mat-button routerLink="/series">series</a>
+          <a mat-button routerLink="/genres">genres</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        <!--
+         content projection: this allows to show the contend of app-routing inside the page and not under the navbar.
+         When the route change, it change the content here
+         -->
+        <ng-content></ng-content>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </nav>
+</header>
+
+

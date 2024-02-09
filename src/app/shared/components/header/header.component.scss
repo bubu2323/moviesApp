@@ -7,11 +7,7 @@ header {
   nav {
     .mat-toolbar {
       height: 7vh;
-      background-color: #171717;
-
-      .menu-icon {
-        color: #f9db24;
-      }
+      background-color: var(--primary-black);
     }
 
     .logo-container {
@@ -24,10 +20,6 @@ header {
 
     .spacer-nav {
       flex: 1 1 auto;
-    }
-
-    .link-container {
-      color: #f9db24;
     }
 
     .mat-sidenav-container {

@@ -36,7 +36,11 @@ $ngMovieApp-theme: mat.define-light-theme((
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import 'node_modules/primeflex/primeflex.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100;300;400&display=swap');
-
+:root {
+  --yellow-500: #f9db24;
+  --primary-black: #171717;;
+  --white: #ffffff;
+}
 a{
   text-decoration: none;
   font-size: 110%;
